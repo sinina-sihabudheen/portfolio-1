@@ -702,3 +702,29 @@ footer span a:hover{
     width:10px;
 }
 }
+/* Fix skills layout on larger screens */
+.skills .skills-content {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Make sure both columns share space properly */
+.skills .column {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* On small screens, stack them vertically */
+@media (max-width: 992px) {
+    .skills .skills-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .skills .column {
+        width: 100%;
+    }
+}
+
