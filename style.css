@@ -313,65 +313,58 @@ section .title::after{
 
 /* skills and experience section styling */
 
-.skills .title::after{
+.skills .title::after {
     content: "What I can..";
 }
+
 .skills .skills-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row-reverse; /* <- This reverses the order of left and right */
+    gap: 30px;
 }
-.skills .skills-content .left .experience p {
-    margin-bottom: 15px;
-    font-size: 17px;
-    line-height: 1.4;
+
+.skills .column {
+    flex: 1;
+    min-width: 300px;
 }
-.skills .skills-content .left .text{
+
+.skills .column.left .text {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
-.skills .skills-content .left p{
+
+.skills .column.left p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
     text-align: justify;
 }
-.skills .skills-content .left a{
-    display: inline-block;
-    background:rgb(4, 54, 123);
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid rgb(4, 54, 123);
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: rgb(4, 54, 123);
-    background: none;
-}
-.skills .skills-content .right .bars{
+
+.skills .column.right .bars {
     margin-bottom: 15px;
 }
-.skills .skills-content .right .info{
+
+.skills .column.right .info {
     display: flex;
-    margin-bottom: 5px;
-    align-items: center;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
-.skills .skills-content .right span{
+
+.skills .column.right .info span {
+    font-size: 16px;
     font-weight: 500;
-    font-size: 18px;
 }
-.skills .skills-content .right .line{
+
+.skills .column.right .line {
     height: 5px;
-    width: 100%;
     background: lightgrey;
     position: relative;
+    border-radius: 4px;
+    overflow: hidden;
 }
-.skills .skills-content .right .line::before{
+
+.skills .column.right .line::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -379,28 +372,29 @@ section .title::after{
     top: 0;
     background: rgb(4, 54, 123);
 }
-.skills-content .right .python::before{
+
+.skills .line.python::before {
     width: 85%;
 }
-.skills-content .right .django::before{
+.skills .line.django::before {
     width: 75%;
 }
-.skills-content .right .reactjs::before{
+.skills .line.reactjs::before {
     width: 75%;
 }
-.skills-content .right .postgresql::before{
+.skills .line.postgresql::before {
     width: 70%;
 }
-.skills-content .right .sql::before{
+.skills .line.sql::before {
     width: 65%;
 }
-.skills-content .right .orm::before{
+.skills .line.orm::before {
     width: 70%;
 }
-.skills-content .right .figma::before{
+.skills .line.figma::before {
     width: 70%;
 }
-.skills-content .right .html/css::before{
+.skills .line.html-css::before {
     width: 75%;
 }
 
