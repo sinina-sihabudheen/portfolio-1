@@ -316,9 +316,12 @@ section .title::after{
 .skills .title::after{
     content: "What I can..";
 }
-.skills .skills-content .column{
-/*     width: calc(50% - 30px); */
-    width: 48%;
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* <- This reverses the order of left and right */
 }
 .skills .skills-content .left .experience p {
     margin-bottom: 15px;
@@ -376,20 +379,29 @@ section .title::after{
     top: 0;
     background: rgb(4, 54, 123);
 }
-.skills-content .right .html::before{
+.skills-content .right .python::before{
+    width: 85%;
+}
+.skills-content .right .django::before{
     width: 75%;
 }
-.skills-content .right .css::before{
+.skills-content .right .reactjs::before{
     width: 75%;
 }
-.skills-content .right .js::before{
-    width: 45%;
+.skills-content .right .postgresql::before{
+    width: 70%;
 }
-.skills-content .right .php::before{
+.skills-content .right .sql::before{
+    width: 65%;
+}
+.skills-content .right .orm::before{
+    width: 70%;
+}
+.skills-content .right .figma::before{
+    width: 70%;
+}
+.skills-content .right .html/css::before{
     width: 75%;
-}
-.skills-content .right .mysql::before{
-    width: 60%;
 }
 
 /* Works section styling */
