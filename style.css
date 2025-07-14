@@ -317,7 +317,13 @@ section .title::after{
     content: "What I can..";
 }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+/*     width: calc(50% - 30px); */
+    width: 48%;
+}
+.skills .skills-content .left .experience p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.4;
 }
 .skills .skills-content .left .text{
     font-size: 20px;
