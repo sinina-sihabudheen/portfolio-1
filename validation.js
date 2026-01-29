@@ -1,4 +1,4 @@
-var flag = 0;
+ var flag = 0;
 
 function containsSpecialChars(str) {
    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
